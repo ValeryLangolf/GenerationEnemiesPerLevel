@@ -9,9 +9,13 @@ public class Enemy : MonoBehaviour
 
     private Animator _animator;
 
-    private void Start()
+    private void Awake()
     {
         _animator = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {        
         _animator.SetTrigger(TriggerRun);
     }
 
